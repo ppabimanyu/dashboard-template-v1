@@ -1,0 +1,15 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+@import '../../../../vendor/pxlrbt/filament-activity-log/resources/css/styles.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+@source '../../../../vendor/jeffgreco13/filament-breezy/resources/**/*';
+
+.fi-layout {
+    @apply bg-gray-100 pr-4
+}
+
+.fi-main {
+    @apply bg-gray-50 my-6 mr-10 rounded-2xl;
+}
