@@ -2,7 +2,7 @@
 
 namespace App\Filament\Resources\Users;
 
-use App\Filament\Resources\User\Pages\ActivityUser;
+use App\Filament\Resources\Users\Pages\ActivityUser;
 use App\Filament\Resources\Users\Pages\CreateUser;
 use App\Filament\Resources\Users\Pages\EditUser;
 use App\Filament\Resources\Users\Pages\ListUsers;
@@ -22,7 +22,7 @@ class UserResource extends Resource
 {
     protected static ?string $model = User::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::Users;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedUsers;
 
     protected static ?string $recordTitleAttribute = 'name';
 
@@ -60,4 +60,9 @@ class UserResource extends Resource
     }
 
     protected static string|UnitEnum|null $navigationGroup = 'Users Management';
+
+    public static function canViewAny(): bool
+    {
+        return true;
+    }
 }

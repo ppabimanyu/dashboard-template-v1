@@ -31,6 +31,7 @@ class AdminPanelProvider extends PanelProvider
     {
         return $panel
             ->default()
+            ->spa()
             ->id('admin')
             ->path('admin')
             ->brandName('Dashboard V1')
@@ -78,7 +79,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->maxContentWidth(Width::Full)
             ->sidebarWidth('18rem')
-            ->sidebarCollapsibleOnDesktop()
+            // ->sidebarCollapsibleOnDesktop()
             ->topbar(false)
             ->userMenu(position: UserMenuPosition::Sidebar)
             ->authGuard('web')
