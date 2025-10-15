@@ -7,9 +7,41 @@
 @source '../../../../vendor/jeffgreco13/filament-breezy/resources/**/*';
 
 .fi-layout {
-    @apply bg-gray-100 pr-4
+    @apply bg-white dark:bg-gray-950;
 }
 
-.fi-main {
-    @apply bg-gray-50 my-6 mr-10 rounded-2xl;
+.fi-sidebar {
+    @apply shadow-lg dark:bg-gray-900 rounded-tr-2xl rounded-br-2xl;
+}
+
+.fi-sidebar-nav {
+    @apply pl-5 pr-2;
+}
+
+.fi-header-subheading {
+    @apply text-sm;
+}
+
+.fi-sidebar-header {
+    @apply flex flex-row-reverse;
+}
+
+.fi-ta-search-field {
+    @apply items-start;
+}
+
+.fi-sidebar-group {
+    @apply gap-0;
+}
+
+.fi-btn {
+    @apply bg-gradient-to-r from-indigo-400 to-blue-500 hover:from-blue-500 hover:to-indigo-600 text-white;
+
+    &>.fi-icon {
+        @apply text-white;
+    }
+}
+
+.fi-sidebar-header-logo-ctn {
+    @apply flex justify-center items-center;
 }

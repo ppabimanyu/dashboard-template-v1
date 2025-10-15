@@ -34,6 +34,9 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->brandName('Dashboard V1')
+            ->favicon('/brand-logo.png')
+            ->brandLogo('/brand-logo.png')
+            ->brandLogoHeight('2rem')
             ->login()
             ->registration()
             ->emailVerification()
@@ -41,7 +44,7 @@ class AdminPanelProvider extends PanelProvider
             ->passwordReset()
             ->colors([
                 'primary' => Color::Indigo,
-                'gray' => Color::Gray,
+                // 'gray' => Color::Gray,
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
@@ -74,6 +77,7 @@ class AdminPanelProvider extends PanelProvider
                     ->label('Settings'),
             ])
             ->maxContentWidth(Width::Full)
+            ->sidebarWidth('18rem')
             ->sidebarCollapsibleOnDesktop()
             ->topbar(false)
             ->userMenu(position: UserMenuPosition::Sidebar)
@@ -83,7 +87,7 @@ class AdminPanelProvider extends PanelProvider
                     ->myProfile(
                         shouldRegisterUserMenu: true, // Sets the 'account' link in the panel User Menu (default = true)
                         userMenuLabel: 'Account', // Customizes the 'account' link label in the panel User Menu (default = null)
-                        shouldRegisterNavigation: true, // Adds a main navigation item for the My Profile page (default = false)
+                        shouldRegisterNavigation: false, // Adds a main navigation item for the My Profile page (default = false)
                         navigationGroup: 'Settings', // Sets the navigation group for the My Profile page (default = null)
                         hasAvatars: true, // Enables the avatar upload form component (default = false)
                         slug: 'account' // Sets the slug for the profile page (default = 'my-profile')
